@@ -24,6 +24,10 @@
 
 
 
+更新到master分支了。
+
+
+
 ```
 git init
 
@@ -33,7 +37,7 @@ git push origin master -f //（强制提交）
 git remote add origin git@github.com:xingchen1997/email_day.git
 
 git add .              #将当前目录所有文件添加到git暂存区
-git commit -m "my commit"            #提交并备注提交信息
+git commit -m "更新到master分支了。"            #提交并备注提交信息
 git push                        #将本地提交推送到远程仓库
 ```
 
