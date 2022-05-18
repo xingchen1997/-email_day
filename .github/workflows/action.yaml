@@ -1,4 +1,4 @@
-name: '每隔10min发一封邮件'
+name: 'Scheduled 10 min'
 
 on:
     push:
