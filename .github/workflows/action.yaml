@@ -1,11 +1,11 @@
-name: 'scheduled-10-min'
+name: 'scheduled-5-min'
 
 on:
     push:
         branches:
             - master
     schedule:
-        - cron: '*/10 * * * *'
+        - cron: '2/5 * * * *'
 
 jobs:
     build:
