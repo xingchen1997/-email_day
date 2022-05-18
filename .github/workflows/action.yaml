@@ -1,4 +1,4 @@
-name: 'GitHub Actions email Bot'
+name: '每隔10min发一封邮件'
 
 on:
     push:
@@ -32,7 +32,7 @@ jobs:
                 server_port: ${{secrets.MAIL_SERVER_PORT}}
                 username: ${{secrets.MAIL_USERNAME}}
                 password: ${{secrets.MAIL_PASSWORD}}
-                subject: '滴，你的爱心邮件来了'
+                subject: '写给彤宝的爱心邮件'
                 body: file://result.html
                 to: ${{secrets.MAIN_SEND_TO}}
                 from: ${{secrets.MAIL_SEND_FROM}}
