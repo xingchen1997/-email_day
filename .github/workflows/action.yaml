@@ -1,4 +1,4 @@
-name: 'Scheduled 10 min'
+name: 'scheduled-10-min'
 
 on:
     push:
@@ -23,13 +23,17 @@ jobs:
             - run: node main.js $START_DAY $MARRY_START_DAY $LOCAL
               env:
                 START_DAY: ${{ secrets.START_DAY }}
+#                结婚的日子
                 MARRY_START_DAY: ${{ secrets.MARRY_START_DAY }}
+#                目前所在的位置，这个需要进行修改
                 LOCAL: ${{ secrets.LOCAL }}
             - name: Send mail
               uses: dawidd6/action-send-mail@v2
               with:
-                server_address: ${{secrets.MAIL_SERVER_ADDRESS}}
-                server_port: ${{secrets.MAIL_SERVER_PORT}}
+                server_address: smtp.qq.com
+#               server_address: ${{secrets.MAIL_SERVER_ADDRESS}} smtp.qq.com
+#                server_port: ${{secrets.MAIL_SERVER_PORT}}
+                server_port: 465
                 username: ${{secrets.MAIL_USERNAME}}
                 password: ${{secrets.MAIL_PASSWORD}}
                 subject: '写给彤宝的爱心邮件'

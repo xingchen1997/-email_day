@@ -19,7 +19,7 @@ const local = process.env.LOCAL;
 // 爬取数据的url
 const OneUrl = "http://wufazhuce.com/";
 const WeatherUrl = "https://tianqi.moji.com/weather/china/" + local;
-
+// https://tianqi.moji.com/weather/china/jiangsu/nanjing
 // 获取ONE内容
 function getOneData() {
   let p = new Promise(function (resolve, reject) {
@@ -119,6 +119,7 @@ function generateHtml(HtmlData) {
 }
 
 // 聚合
+// 这里实现了日期的转换嗷
 function main() {
   let HtmlData = {};
   // how long with
