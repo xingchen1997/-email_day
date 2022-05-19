@@ -1,11 +1,11 @@
-name: 'scheduled-5-min'
+name: 'Runs every hour, on the hour.'
 
 on:
     push:
         branches:
             - master
     schedule:
-        - cron: '1/10 * * * *'
+        - cron: '0 0/1 * * *'
 
 jobs:
     build:
